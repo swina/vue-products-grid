@@ -40,9 +40,6 @@ In template (for options and configuration see Docs below)
 ...
 ```
 
-<small>*</small> Remarks
-
-
 
 # Docs
 ```vue-products-grid``` has many features and options that you can control in order to fit with your template/layout/app.
@@ -50,6 +47,8 @@ In template (for options and configuration see Docs below)
 We designed the component in order to make compatible with a clean project so we decided to not include any dependency. For this reason you can add to any Vue project as is, without depending on third libraries, or simply using yours.
 
 For any issue please open an issue on github repository.
+
+<small>*</small> Remarks
 
 <i>
 The rating element has been forked and included in the component from the vue-star-rating component [https://github.com/craigh411/vue-star-rating] by craigh411.
@@ -63,21 +62,20 @@ The rating element has been forked and included in the component from the vue-st
 | options | NO | Object for configuration purpose | Object
 
 
-#### ```items``` prop definition
+#### items prop definition
 ```items``` prop as array of objects requires a defined structure for each object. If your data don't match the following structure use ```mapping``` as described below
 
-
-| Name | Description | Type | Notes |
-| :--- | :--- | :--- | :--- | :--- |
-| id | Product ID | String/Number | Converted to string by component |
-| name | Product name | String* | injected HTML available |
-| label | Product label (category, ecc) | String<small>*</small> | injected HTML available |
-| abstract | Product abstract | String* | injected HTML available |
-| image | Product image URL | URL/URI |
-| price | Product price | Number | float 2 decimals format applied |
-| sale_price | Product sale price | Number | float 2 decimals format applied |
-| rating | Product rating | Number | Integer or float |
-| isfavorite | Product in the favorite user list | Boolean |
+| Field | Description | Type | Info
+| :--- | :--- | :--- | :---  
+| id | Product ID | String/Number | Converted to string by component
+| name | Product name | String | injected HTML available 
+| label | Product label (category, ecc) | String<small>*</small> | injected HTML available 
+| abstract | Product abstract | String | injected HTML available 
+| image | Product image URL | URL/URI 
+| price | Product price | Number | float 2 decimals format applied 
+| sale_price | Product sale price | Number | float 2 decimals format applied 
+| rating | Product rating | Number | Integer or float 
+| isfavorite | Product in the favorite user list | Boolean 
 
 <small>*</small> With name, label and abstract fields you can inject HTML code directly
 
@@ -129,11 +127,10 @@ Mapping Fields example:
 #### Configuration params for ```options``` prop
 With the ```options``` object you can customize your grid widgets with the following params.
 
-
-| Name | Description | Type | Default |
-| :--- | :--- | :--- | :--- | :---  |
+| Option | Description | Type | Default
+| :--- | :--- | :--- | :---  
 | color | background color | String | #fff
-| title_color | title color | String | #555
+| title_color | title color | String | #555 
 | text_color | all text color | String | #ccc
 | price | price color | String | #555
 | sale_color | sale price color | String | #ff0000
@@ -146,6 +143,7 @@ With the ```options``` object you can customize your grid widgets with the follo
 | btn_1* | you can assign your html icon | String | ```<i class="material-icons">favorite_border</i>```*
 | btn_1_on* | btn_1 toggle | String | ```<i class="material-icons">favorite</i>```*
 | btn_2* | assign your icon html code | String | ```<i class="material-icons">shopping_cart</i>```*
+
 
 #### Note
 <small>*</small> to use default values you need to add the Google Material Icons to your project.
@@ -172,12 +170,12 @@ vue-products-grid emits 4 events (this.$emit(...)) in order to get the following
 
 The above events needs to be declared in the component bindings to connect your template. Your template needs to have the functions declared in the binding in the methods section (see complete examble below)
 
-| Event | Required | Description | Type |  Return
-| :--- | :---: | :--- | :--- | :---  | :---  |
+| Event | Required | Description | Type | Return
+| :--- | :--- | :--- | :--- | :--- 
 | @widgetSelected | NO | Clicked on image or title | Function | Object (product) |
 | @widgetClick | NO | Click on btn_2 | Function | Object (product) |
 | @widgetRating | NO | Set rating click | Function | -Integer (rating): rating selected by user <br>-Object (product): product clicked |
-| @widgetFavorite | NO | Click on btn_1 | Function | -Object (product): product clicked <br>- Boolean (true/false): product favorite<br>-Integer (index): index of the items array|
+| @widgetFavorite | NO | Click on btn_1 | Function | --Integer (index): index of the items array clicked <br>- Boolean (true/false): product favorite|
 
 You can assign your custom logic to each emitted event. Example : you can change the add to cart event emitted behavior to open the single product page instead to add to cart logic.
 
@@ -253,10 +251,10 @@ export default {
       //.. do your logic ...
       console.log("rating=>", rating, "product=>", product);
     },
-    set_favorite(product, status, index) {
+    set_favorite(index, status) {
       //.. do your logic ...
       this.items[index].isfavorite = status;
-      console.log("favorite product=>", product, "status=>", status);
+      console.log("favorite product index =>", index, "status=>", status);
     }
   }
 };
