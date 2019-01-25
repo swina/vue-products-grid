@@ -62,8 +62,11 @@ The rating element has been forked and included in the component from the vue-st
 | mapping | NO | Objects for fields mapping | Object
 | options | NO | Object for configuration purpose | Object
 
+
 #### ```items``` prop definition
 ```items``` prop as array of objects requires a defined structure for each object. If your data don't match the following structure use ```mapping``` as described below
+
+
 | Name | Description | Type | Notes
 | :--- | :--- | :--- | :--- | :---
 | id | Product ID | String/Number | Converted to string by component
@@ -124,7 +127,8 @@ Mapping Fields example:
 
 
 #### Configuration params for ```options``` prop
-With the ```options``` object you can customize your grid widgets with the following params
+With the ```options``` object you can customize your grid widgets with the following params.
+
 
 | Name | Description | Type | Default |
 | :--- | :--- | :--- | :--- | :---  |
