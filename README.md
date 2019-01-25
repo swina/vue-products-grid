@@ -17,8 +17,6 @@ Fully configurable with different options and reactive with full integration in 
 
 ## Demo
 
-[CodeSandbox](https://codesandbox.io/s/38w6pqq9l6)
-
 [Demo](https://38w6pqq9l6.codesandbox.io/)
 
 ## Installation
