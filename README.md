@@ -67,17 +67,17 @@ The rating element has been forked and included in the component from the vue-st
 ```items``` prop as array of objects requires a defined structure for each object. If your data don't match the following structure use ```mapping``` as described below
 
 
-| Name | Description | Type | Notes
-| :--- | :--- | :--- | :--- | :---
-| id | Product ID | String/Number | Converted to string by component
-| name | Product name | String* | injected HTML available
-| label | Product label (category, ecc) | String<small>*</small> | injected HTML available
-| abstract | Product abstract | String* | injected HTML available
-| image | Product image URL | URL/URI
-| price | Product price | Number | float 2 decimals format applied
-| sale_price | Product sale price | Number | float 2 decimals format applied
-| rating | Product rating | Number | Integer or float
-| isfavorite | Product in the favorite user list | Boolean
+| Name | Description | Type | Notes |
+| :--- | :--- | :--- | :--- | :--- |
+| id | Product ID | String/Number | Converted to string by component |
+| name | Product name | String* | injected HTML available |
+| label | Product label (category, ecc) | String<small>*</small> | injected HTML available |
+| abstract | Product abstract | String* | injected HTML available |
+| image | Product image URL | URL/URI |
+| price | Product price | Number | float 2 decimals format applied |
+| sale_price | Product sale price | Number | float 2 decimals format applied |
+| rating | Product rating | Number | Integer or float |
+| isfavorite | Product in the favorite user list | Boolean |
 
 <small>*</small> With name, label and abstract fields you can inject HTML code directly
 
