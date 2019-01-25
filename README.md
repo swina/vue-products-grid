@@ -56,11 +56,11 @@ The rating element has been forked and included in the component from the vue-st
 </i>
 
 ## Props
-| Prop | Required | Description | Type | Default |
-| :--- | :--- | :--- | :--- | :---  |
-| items | YES | Array of objects<br>(see table below) | Array | [] |
+| Prop | Required | Description | Type | Default
+| :--- | :--- | :--- | :--- | :---  
+| items | YES | Array of objects<br>(see table below) | Array | []
 | mapping | NO | Objects for fields mapping | Object
-| options | NO | Object for configuration purpose | Object |
+| options | NO | Object for configuration purpose | Object
 
 #### ```items``` prop definition
 ```items``` prop as array of objects requires a defined structure for each object. If your data don't match the following structure use ```mapping``` as described below
